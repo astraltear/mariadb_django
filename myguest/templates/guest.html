@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+{% if guests.count > 0 %}
+	{%for data in guests %}
+		<div>
+		{{data.title}}
+		{{data.content}}
+		{{data.regdate}}
+	</div>
+	{% endfor %}
+
+{% else %}
+	NOT FOUND
+{% endif %}
+
+
+</body>
+</html>
